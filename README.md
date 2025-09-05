@@ -15,7 +15,7 @@ JARVIS AI, Tony Stark'ın yapay zeka asistanından esinlenilmiş, doğal dil iş
 
 ### Ön Gereksinimler
 
-- Python 3.9 veya üzeri
+- Python 3.11 veya üzeri
 - Node.js 16 veya üzeri
 - MongoDB (Community Sürümü)
 
@@ -115,7 +115,7 @@ JARVIS AI, Tony Stark'ın yapay zeka asistanından esinlenilmiş, doğal dil iş
    xcopy /E /I /Y emergentintegrations "%VIRTUAL_ENV%\Lib\site-packages\emergentintegrations"
    
    # Linux/macOS için
-   cp -r emergentintegrations "$VIRTUAL_ENV/lib/python3.9/site-packages/"
+   cp -r emergentintegrations "$VIRTUAL_ENV/lib/python3.11/site-packages/"
    ```
 
 4. Ortam değişkenlerini ayarlayın:
