@@ -85,7 +85,7 @@ class ConnectionManager:
 manager = ConnectionManager()
 
 # Gemini AI integration
-GEMINI_API_KEY = "AIzaSyCJM0oyamxY6xpOBiGyESMG1Oncw57qI94"
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 
 class JarvisAI:
     def __init__(self):
