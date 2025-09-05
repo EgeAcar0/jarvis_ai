@@ -40,7 +40,7 @@ JARVIS AI, Tony Stark'ın yapay zeka asistanından esinlenilmiş, doğal dil iş
       --dearmor
 
    # Repository ekleyin
-   echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -c -s)/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+   echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/8.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 
    # MongoDB'yi yükleyin
    sudo apt-get update
