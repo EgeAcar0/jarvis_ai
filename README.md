@@ -89,7 +89,7 @@ JARVIS AI, Tony Stark'ın yapay zeka asistanından esinlenilmiş, doğal dil iş
 
 1. Öncelikle projeyi GitHub'dan klonlayın:
    ```bash
-   git clone https://github.com/kullaniciadiniz/jarvis-ai.git
+   git clone https://github.com/EgeAcar0/jarvis-ai.git
    cd jarvis-ai
    ```
 
