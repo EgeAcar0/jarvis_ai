@@ -17,7 +17,73 @@ JARVIS AI, Tony Stark'ın yapay zeka asistanından esinlenilmiş, doğal dil iş
 
 - Python 3.9 veya üzeri
 - Node.js 16 veya üzeri
-- MongoDB
+- MongoDB (Community Sürümü)
+
+#### MongoDB Kurulumu
+
+1. **Windows için**:
+   - [MongoDB Community Server](https://www.mongodb.com/try/download/community) adresinden indirin
+   - Kurulum sihirbazını çalıştırın ve varsayılan ayarları kullanın
+   - Kurulum sırasında "Install MongoDB as a Service" seçeneğini işaretleyin
+   - Kurulum tamamlandıktan sonra MongoDB servisinin çalıştığından emin olun:
+     ```
+     services.msc
+     ```
+     (Açılan pencerede "MongoDB" servisinin "Çalışıyor" durumunda olduğunu kontrol edin)
+
+2. **Linux (Ubuntu/Debian) için**:
+   ```bash
+   # MongoDB için GPG anahtarını ekleyin
+   sudo apt-get install gnupg
+   curl -fsSL https://pgp.mongodb.com/server-6.0.asc | \
+      sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg \
+      --dearmor
+
+   # Repository ekleyin
+   echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -c -s)/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
+   # MongoDB'yi yükleyin
+   sudo apt-get update
+   sudo apt-get install -y mongodb-org
+
+   # MongoDB servisini başlatın
+   sudo systemctl start mongod
+   sudo systemctl enable mongod
+   ```
+
+3. **MacOS için**:
+   ```bash
+   # Homebrew ile kurulum
+   brew tap mongodb/brew
+   brew update
+   brew install mongodb-community
+
+   # MongoDB servisini başlatın
+   brew services start mongodb-community
+   ```
+
+4. **MongoDB'yi Doğrulama**:
+   Terminal veya Komut İstemi'ni açıp aşağıdaki komutu çalıştırın:
+   ```bash
+   mongosh
+   ```
+   Eğer MongoDB kabuğu açılıyorsa, kurulum başarılı demektir. Çıkmak için `exit` yazabilirsiniz.
+
+5. **Veritabanı Kullanıcısı Oluşturma (Opsiyonel)**:
+   ```bash
+   mongosh
+   use admin
+   db.createUser({
+     user: "adminUser",
+     pwd: "sifreniz",
+     roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+   })
+   exit
+   ```
+   Daha sonra `backend/.env` dosyanızda bağlantı dizesini güncelleyebilirsiniz:
+   ```
+   MONGO_URL="mongodb://adminUser:sifreniz@localhost:27017/"
+   ```
 
 ### Projeyi İndirme ve Kurulum
 
