@@ -19,6 +19,14 @@ JARVIS AI, Tony Stark'ın yapay zeka asistanından esinlenilmiş, doğal dil iş
 - Node.js 16 veya üzeri
 - MongoDB
 
+### Projeyi İndirme ve Kurulum
+
+1. Öncelikle projeyi GitHub'dan klonlayın:
+   ```bash
+   git clone https://github.com/kullaniciadiniz/jarvis-ai.git
+   cd jarvis-ai
+   ```
+
 ### Backend Kurulumu
 
 1. Sanal ortam oluşturun ve etkinleştirin:
@@ -94,4 +102,37 @@ JARVIS AI, Tony Stark'ın yapay zeka asistanından esinlenilmiş, doğal dil iş
 
 ## Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
+Bu proje MIT lisansı altında lisanslanmıştır. Projenize MIT lisansı eklemek için aşağıdaki adımları izleyin:
+
+1. Projenizin kök dizininde `LICENSE` adında yeni bir dosya oluşturun
+2. Aşağıdaki metni kopyalayıp yapıştırın (yıl ve telif hakkı sahibi bilgisini güncelleyin):
+
+```
+MIT License
+
+Copyright (c) 2025 [Your Name or Organization]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+3. `[Your Name or Organization]` kısmını kendi adınız veya kuruluşunuzun adıyla değiştirin
+4. Gerekirse yılı güncelleyin
+5. Dosyayı kaydedin
+
+Bu lans, başkalarının projenizi kullanmasına, değiştirmesine ve dağıtmasına izin verirken, sizi yasal sorumluluklardan korur.
